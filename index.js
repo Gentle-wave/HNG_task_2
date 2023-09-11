@@ -36,6 +36,6 @@ app.get('/', (req, res)=> {
 
  require('./routes/person.route.js')(app)
 
-app.listen(process.env.PORT || 4000, () => {
-    console.log('server is running on port: 4000 ')
+app.listen(process.env.PORT || 5432, () => {
+    console.log('server is running on port:'+ process.env.PORT)
 })
