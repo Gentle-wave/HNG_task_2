@@ -20,14 +20,14 @@ Before setting up and running the API, ensure you have the following prerequisit
 1. Clone the GitHub repository:
 
 2. Create or modify the sxixting .env file in the project root directory with the following content.
-DATABASE_URL=your_production_database_url
-DIALECT=postgres
-HOST=localhost
-PORT=5432
-USER=your_username
-PASSWORD=your_password
-DATABASE=your_local_database_name
-SSL=false
+- DATABASE_URL=your_production_database_url
+- DIALECT=postgres
+- HOST=localhost
+- PORT=5432
+- USER=your_username
+- PASSWORD=your_password
+- DATABASE=your_local_database_name
+- SSL=false
  
 NOTE: this code asumes you habe a postgresqldatabase already in your local machine.  
 3. This file will store your environment-specific configuration settings. Modify it based on your requirements:
