@@ -10,7 +10,7 @@ let corsOption = {
 }
 
 const db = require('./models')
-db.sequelize.sync({force: true})
+db.sequelize.sync({})
 .then(() => {
     console.log("Database connected")  //successfull connection
 })
@@ -26,6 +26,12 @@ app.use(express.json())
 //parse request of content_type aplication/x-www-form-urllencoded
 app.use(express.urlencoded({extende: true}))
 
+
+app.get('/api', (req, res)=> {
+    res.json({
+       message: 'welcome homepage please navigate to the endpoint you wish to access'
+    })
+   })
 
 app.get('/', (req, res)=> {
     res.json({
