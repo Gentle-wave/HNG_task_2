@@ -38,5 +38,7 @@ NOTE: this code asumes you habe a postgresqldatabase already in your local machi
 - http://localhost:PORT/api OR
 - https://hng-task-2-i324.onrender.com/api
 
+# for more, check the DOCUMENTATION.md file
+
 
 
