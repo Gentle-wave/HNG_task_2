@@ -34,7 +34,9 @@ NOTE: this code asumes you habe a postgresqldatabase already in your local machi
 
 4. npm install
 5. npm run dev(nodemon was used in production)
-6. The API will be accessible at http://localhost:PORT/api OR https://hng-task-2-i324.onrender.com/api
+6. The API will be accessible at
+- http://localhost:PORT/api OR
+- https://hng-task-2-i324.onrender.com/api
 
 
 
