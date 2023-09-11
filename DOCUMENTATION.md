@@ -6,17 +6,15 @@
   API Endpoints
 The API provides the following endpoints for managing person records:
 
-Create a Person: POST /api
-
-Request Format:
+-Create a Person: POST /api
+--Request Format:
 json
 
 {
   "name": "John Doe"
 }
-Response Format:
+--Response Format:
 json
-
 {
   "statusCode": 201,
   "status": "success",
@@ -28,11 +26,10 @@ json
     "updatedAt": "2023-09-10T12:00:00.000Z"
   }
 }
-Get a Person by ID: GET /api/:id
+-Get a Person by ID: GET /api/:id
 
-Response Format (Success):
+--Response Format (Success):
 json
-
 {
   "statusCode": 200,
   "status": "success",
@@ -44,25 +41,22 @@ json
     "updatedAt": "2023-09-10T12:00:00.000Z"
   }
 }
-Response Format (Not Found):
+--Response Format (Not Found):
 json
-
 {
   "statusCode": 404,
   "status": "error",
   "message": "Person not found"
 }
-Update a Person's Name by ID: PUT /api/:id
-
-Request Format:
+-Update a Person's Name by ID: PUT /api/:id
+--Request Format:
 json
 
 {
   "newName": "Jane Doe"
 }
-Response Format (Success):
+--Response Format (Success):
 json
-
 {
   "statusCode": 200,
   "status": "success",
@@ -74,27 +68,25 @@ json
     "updatedAt": "2023-09-10T13:00:00.000Z"
   }
 }
-Response Format (Not Found):
+--Response Format (Not Found):
 json
-
 {
   "statusCode": 404,
   "status": "error",
   "message": "Person not found"
 }
-Delete a Person by ID: DELETE /api/:id
+- Delete a Person by ID: DELETE /api/:id
 
-Response Format (Success):
+--Response Format (Success):
 json
-
 {
   "statusCode": 200,
   "status": "success",
   "message": "Person deleted successfully"
 }
-Response Format (Not Found):
-json
 
+--Response Format (Not Found):
+json
 {
   "statusCode": 404,
   "status": "error",
@@ -106,17 +98,17 @@ Here are sample usage examples of the API endpoints using cURL:
 
 Create a Person (POST):
 
-- POST http://localhost:3000/api -H "Content-Type: application/json" -d '{"name": "John Doe"}'
+- POST http://localhost:PORT/api -H "Content-Type: application/json" -d '{"name": "John Doe"}'
 Get a Person by ID (GET):
 
-- curl http://localhost:3000/api/u_id
+- curl http://localhost:PORT/api/u_id
 Update a Person's Name (PUT):
 
-- PUT http://localhost:3000/api/u_id -H "Content-Type: application/json" -d '{"newName": "Jane Doe"}'
+- PUT http://localhost:PORT/api/u_id -H "Content-Type: application/json" -d '{"newName": "Jane Doe"}'
 Delete a Person by ID (DELETE):
 
 
-- DELETE http://localhost:3000/api/u_id
+- DELETE http://localhost:PORT/api/u_id
 Known Limitations and Assumptions
 The API assumes that the "name" field is a string for all endpoints.
 The API expects valid person IDs for retrieving, updating, and deleting.
