@@ -9,7 +9,6 @@ The API provides the following endpoints for managing person records:
 -Create a Person: POST /api
 --Request Format:
 json
-
 {
   "name": "John Doe"
 }
@@ -26,6 +25,8 @@ json
     "updatedAt": "2023-09-10T12:00:00.000Z"
   }
 }
+
+
 -Get a Person by ID: GET /api/:id
 
 --Response Format (Success):
@@ -48,6 +49,9 @@ json
   "status": "error",
   "message": "Person not found"
 }
+
+
+
 -Update a Person's Name by ID: PUT /api/:id
 --Request Format:
 json
@@ -75,8 +79,10 @@ json
   "status": "error",
   "message": "Person not found"
 }
-- Delete a Person by ID: DELETE /api/:id
 
+
+
+- Delete a Person by ID: DELETE /api/:id
 --Response Format (Success):
 json
 {
