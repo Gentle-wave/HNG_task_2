@@ -3,101 +3,80 @@
 - [Sample Usage](#sample-usage)
 - [Local Deployment](#local-deployment)
 
-  API Endpoints
-The API provides the following endpoints for managing person records:
+## Endpoints
 
--Create a Person: POST /api
---Request Format:
-json
-{
-  "name": "John Doe"
-}
---Response Format:
-json
-{
-  "statusCode": 201,
-  "status": "success",
-  "message": "Person created successfully",
-  "data": {
-    "id": 1,
-    "name": "John Doe",
-    "createdAt": "2023-09-10T12:00:00.000Z",
-    "updatedAt": "2023-09-10T12:00:00.000Z"
-  }
-}
+### Create a Person
 
+- **Endpoint**: `POST /api`
+- **Request Format**: JSON
+  - **Request Body**:
+    ```json
+    {
+      "name": "John Doe"
+    }
+    ```
+- **Response Format**: JSON
+  - **Response Body**:
+    ```json
+    {
+      "person": {
+        "id": 1,
+        "name": "John Doe",
+        "createdAt": "2023-09-12T00:00:00.000Z",
+        "updatedAt": "2023-09-12T00:00:00.000Z"
+      }
+    }
+    ```
 
--Get a Person by ID: GET /api/:id
+### Fetch a Person
 
---Response Format (Success):
-json
-{
-  "statusCode": 200,
-  "status": "success",
-  "message": "Person retrieved successfully",
-  "data": {
-    "id": 1,
-    "name": "John Doe",
-    "createdAt": "2023-09-10T12:00:00.000Z",
-    "updatedAt": "2023-09-10T12:00:00.000Z"
-  }
-}
---Response Format (Not Found):
-json
-{
-  "statusCode": 404,
-  "status": "error",
-  "message": "Person not found"
-}
+- **Endpoint**: `GET /api/:id`
+- **Response Format**: JSON
+  - **Response Body**:
+    ```json
+    {
+      "person": {
+        "id": 1,
+        "name": "John Doe",
+        "createdAt": "2023-09-12T00:00:00.000Z",
+        "updatedAt": "2023-09-12T00:00:00.000Z"
+      }
+    }
+    ```
 
+### Update a Person
 
+- **Endpoint**: `PUT /api/:id`
+- **Request Format**: JSON
+  - **Request Body**:
+    ```json
+    {
+      "name": "New name"
+    }
+    ```
+- **Response Format**: JSON
+  - **Response Body**:
+    ```json
+    {
+      "person": {
+        "id": 1,
+        "name": "Updated Name",
+        "createdAt": "2023-09-12T00:00:00.000Z",
+        "updatedAt": "2023-09-12T00:00:00.000Z"
+      }
+    }
+    ```
 
--Update a Person's Name by ID: PUT /api/:id
---Request Format:
-json
+### Delete a Person
 
-{
-  "newName": "Jane Doe"
-}
---Response Format (Success):
-json
-{
-  "statusCode": 200,
-  "status": "success",
-  "message": "Person updated successfully",
-  "data": {
-    "id": 1,
-    "name": "Jane Doe",
-    "createdAt": "2023-09-10T12:00:00.000Z",
-    "updatedAt": "2023-09-10T13:00:00.000Z"
-  }
-}
---Response Format (Not Found):
-json
-{
-  "statusCode": 404,
-  "status": "error",
-  "message": "Person not found"
-}
-
-
-
-- Delete a Person by ID: DELETE /api/:id
---Response Format (Success):
-json
-{
-  "statusCode": 200,
-  "status": "success",
-  "message": "Person deleted successfully"
-}
-
---Response Format (Not Found):
-json
-{
-  "statusCode": 404,
-  "status": "error",
-  "message": "Person not found"
-}
+- **Endpoint**: `DELETE /api/:id`
+- **Response Format**: JSON
+  - **Response Body**:
+    ```json
+    {
+      "message": "Person deleted successfully"
+    }
+    ```
 
  # Sample Usage
 Here are sample usage examples of the API endpoints using cURL:
@@ -105,17 +84,28 @@ Here are sample usage examples of the API endpoints using cURL:
 Create a Person (POST):
 
 - POST http://localhost:PORT/api -H "Content-Type: application/json" -d '{"name": "John Doe"}'
+- https://hng-task-2-i324.onrender.com/api
+  Set the request body to JSON format:
+   ```json
+   {
+     "name": "bayo dayo"
+   } then send
+
+
 Get a Person by ID (GET):
 
-- curl http://localhost:PORT/api/u_id
+- http://localhost:PORT/api/u_id
+- or https://hng-task-2-i324.onrender.com/api/1  (replace 1 with the desired person's ID). 
 
 Update a Person's Name (PUT):
 
 - PUT http://localhost:PORT/api/u_id -H "Content-Type: application/json" -d '{"newName": "Jane Doe"}'
+- https://hng-task-2-i324.onrender.com/api/1  (replace 1 with the desired person's ID).
 Delete a Person by ID (DELETE):
 
 
 - DELETE http://localhost:PORT/api/u_id
+- https://hng-task-2-i324.onrender.com/api/1  (replace 1 with the desired person's ID).
 Known Limitations and Assumptions
 The API assumes that the "name" field is a string for all endpoints.
 The API expects valid person IDs for retrieving, updating, and deleting.
