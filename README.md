@@ -27,7 +27,6 @@ Before setting up and running the API, ensure you have the following prerequisit
 - USER=your_username
 - PASSWORD=your_password
 - DATABASE=your_local_database_name
-- SSL=false
  
 NOTE: this code asumes you habe a postgresqldatabase already in your local machine.  
 3. This file will store your environment-specific configuration settings. Modify it based on your requirements:

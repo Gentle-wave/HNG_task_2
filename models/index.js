@@ -6,7 +6,7 @@ require ('dotenv').config();
 
 let sequelizeOptions = {
   dialect: 'postgres',
-  protocol: 'postgres', // Specify the protocol explicitly
+  protocol: 'postgres', 
   logging: true, 
 };
 if (process.env.DATABASE_URL) {
@@ -39,12 +39,6 @@ if (process.env.DATABASE_URL) {
     username: process.env.USER,
     password: process.env.PASSWORD,
     database: process.env.DATABASE,
-    ssl: false,
-    dialectOptions: {
-      ssl: {
-        require: false,
-      },
-    },
   };
 }
 
