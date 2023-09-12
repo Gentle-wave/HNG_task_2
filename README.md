@@ -1,4 +1,5 @@
 # HNG_task_2
+ here is the link to the UML DIAGRAM https://drive.google.com/file/d/1M7EKZI-oyFrXKk9ZjU64IBJvx8K6R5eW/view?usp=sharing
 
 # Person API
 
