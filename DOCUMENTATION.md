@@ -89,7 +89,7 @@ Create a Person (POST):
    ```json
    {
      "name": "bayo dayo"
-   } then send
+   } 
 
 
 Get a Person by ID (GET):
@@ -101,8 +101,15 @@ Update a Person's Name (PUT):
 
 - PUT http://localhost:PORT/api/u_id -H "Content-Type: application/json" -d '{"newName": "Jane Doe"}'
 - https://hng-task-2-i324.onrender.com/api/1  (replace 1 with the desired person's ID).
-Delete a Person by ID (DELETE):
+   Set the request body to JSON format:
+```json
+{
+  "newName": "Jane Doe"
+}
+```
 
+
+Delete a Person by ID (DELETE):
 
 - DELETE http://localhost:PORT/api/u_id
 - https://hng-task-2-i324.onrender.com/api/1  (replace 1 with the desired person's ID).
