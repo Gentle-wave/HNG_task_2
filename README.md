@@ -36,6 +36,7 @@ NOTE: this code asumes you habe a postgresqldatabase already in your local machi
 6. The API will be accessible at
 - http://localhost:PORT/api OR
 - https://hng-task-2-i324.onrender.com/api
+- and here is the link to the UML DIAGRAM https://drive.google.com/file/d/1M7EKZI-oyFrXKk9ZjU64IBJvx8K6R5eW/view?usp=sharing
 
 # for more, check the DOCUMENTATION.md file
 
